@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Dashboard Template for Bootstrap</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-table.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/PerfectLoad.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WSM</a>
+        </div>
+      
+      </div>
+    </nav>
+
+    <div class="col-sm-1 col-md-1 sidebar">
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="#1" data-toggle="tab"> First</a></li>
+            <li class=""><a href="#2" data-toggle="tab">Second</a></li>
+            <li class=""><a href="#3" data-toggle="tab">Third</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane active" id="1">
+            <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main first-page-container">
+                        <div class="search-container">
+                            <div class="row">
+                                <div class="col-lg-6 search-box" style="float:none">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-box keyword-box" id="keyword-box-1" placeholder="keyword">
+                                        <span class="input-group-btn">
+                                            <button class="btn search-btn btn-primary" id='search-btn-1' type="button">Search</button>
+                                        </span>
+                                    </div><!-- /input-group -->
+                                </div><!-- /.col-lg-6 -->
+                            </div><!-- /.row -->
+                        </div>
+                        
+                        <div class="context-container">
+                                <div class="divider"></div>
+                            <div class="twitter-container">
+                                <h4 class="title"> Twitter</h4>
+                                <table data-toggle="table" id="table-twitter-1"  class="table  table-striped" style="word-break:break-all; word-wrap:break-all;" data-pagination="true">
+                                <thead>
+                                    <tr width="100%">
+                                        <th  data-field="text"  data-align="left">Blog</th>
+                                        <th  data-field="user"  data-align="left" >User</th>
+                                        <th  data-field="comments"  data-align="left" >Comments</th>
+                                        <th  data-field="likes"  data-align="center">Likes</th>
+                                    </tr>
+                                </thead>
+                                </table>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="hashtag-container">
+                                    <h4 class="title"> Hashtags</h4>
+                                    <table data-toggle="table" id="table-hashtag-1" style="height:100px" data-pagination="true">
+                                            <thead>
+                                                <tr>
+                                                        <th data-field="hashtag">Hashtag</th>
+                                                        <th data-field="nums" data-align="right">Nums</th>
+                                                </tr>
+                                            </thead>
+                                    </table>
+                            </div>
+                        </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="2">
+                <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main second-page-container">
+                        <div class="search-container">
+                            <div class="row">
+                                <div class="col-lg-6 search-box">
+                                        <div class="input-group"><!--保持内联，消除边框，类似于form-inline-->
+                                        <div class="input-group-btn">
+                                            <select class="form-control" id="region-select" style="width:100px; padding-left: 5px; padding-right: 5px">
+                                                    <option>blogs</option>
+                                                    <option>hashtag</option>
+                                                    <option>comments</option>
+                                            </select>
+                                        </div>
+                                            <input type="text" class="form-control" id="keyword-box-2" placeholder="keyword" />
+                                            <span class="input-group-btn"><!--不换行，与相邻元素内联-->
+                                                    <button class="btn btn-primary" id='search-btn-2'>Search</button>
+                                            </span>
+                                </div>
+                            </div><!-- /.row -->
+                        </div>
+                        
+                        <div class="context-container">
+                                <div class="divider"></div>
+                            <div class="twitter-container">
+                                <h4 class="title"> Twitter</h4>
+                                <table data-toggle="table" id="table-twitter-2"  class="w-auto" style="height:100px" data-pagination="true">
+                                <thead>
+                                    <tr width="100%">
+                                        <th  data-field="text" data-align="left">Blog</th>
+                                        <th  data-field="user" data-align="left" >User</th>
+                                        <th  data-field="comments" data-align="left" >Comments</th>
+                                        <th  data-field="likes" data-align="center" >Likes</th>
+                                    </tr>
+                                </thead>
+                                </table>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="hashtag-container">
+                                <h4 class="title"> Hashtags</h4>
+                                <table data-toggle="table" id="table-hashtag-2" style="height:100px" data-pagination="true">
+                                <thead>
+                                    <tr>
+                                    <th data-field="hashtag">Hashtag</th>
+                                    <th data-field="nums" data-align="right">Nums</th>
+                                    </tr>
+                                </thead>
+                                </table>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        </div>
+        <div class="tab-pane" id="3">
+            <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main second-page-container">
+                    <div class="search-container">
+                        <div class="row">
+                            <div class="col-lg-6 search-box">
+                                    <div class="input-group"><!--保持内联，消除边框，类似于form-inline-->
+                                        <input type="text" class="form-control" id="keyword-box-3" placeholder="event" />
+                                        <span class="input-group-btn"><!--不换行，与相邻元素内联-->
+                                                <button class="btn btn-primary" id='search-btn-3'>Search</button>
+                                        </span>
+                            </div>
+                        </div><!-- /.row -->
+                    </div>
+                    
+                    <div class="context-container">
+                            <div class="divider"></div>
+                        <div class="twitter-container">
+                            <h4 class="title"> Twitter</h4>
+                            <table data-toggle="table" id="table-twitter-3"  style="height:100px; table-layout:fixed;" data-pagination="true">
+                            <thead>
+                                <tr>
+                                    <th  data-field="blogger" data-align="left" width="70%">Blogger</th>
+                                    <th  data-field="followers" data-align="left" width="15%" >Followers</th>
+                                    <th  data-field="replies" data-align="left"  width="15%">Replies</th>
+                                </tr>
+                            </thead>
+                            </table>
+                        </div>
+                    </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+  </body>
+</html>
